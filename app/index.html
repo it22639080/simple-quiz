@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container" style="background-color:aliceblue;"  >
+        <div class="inner" style="padding: 20px ;">
+            <div class="top" style="width: 100%; height: 50px; display: flex;">
+                <div class="top-left" style="flex: 1; display: flex;">
+                    <input type="text" style="font-weight: bold; text-align: center; width: 100% " id="txt-time" class="form-controller"  disabled>&nbsp;
+                    <input type="text" style="font-weight: bold; text-align: center; width: 100%" id="txt-q-number" class="form-controller"  disabled>&nbsp;
+                    <input type="text" style="font-weight: bold; text-align: center; width: 100%" id="txt-answer" class="form-controller"  disabled>&nbsp;
+                </div>
+                <div class="top-right" style="width: 200px;">
+                    <button class="btn btn-primary" onclick="start()" style="width: 100%; height: 100%;" id="start-button">Start</button>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="q-wrapper">
+            <textarea disabled cols="170" rows="10" class="form-controller" id="questions"></textarea>
+        </div>
+
+        <div class="answer-wrapper" style="margin-top: 20px;">
+            <form>
+                <ul style=" margin: 0; padding: 0; list-style: none;" id="answer-list"> 
+                   
+                </ul>
+            </form>
+        </div>
+
+        <div class="bottom" style="display: flex; justify-content: flex-end;">
+            <button class="btn btn-outline-dark "onclick="verifyAnswer('skipped')"> Skip </button>&nbsp; 
+            <button class="btn btn-success" onclick="verifyAnswer('Submit')"> Submit </button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>
